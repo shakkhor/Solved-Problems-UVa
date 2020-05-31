@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	
+	for(int i =0; i<t; i++)
+	{
+		int ar[100];
+		int n, ans=20000; 
+		cin>>n;
+		for(int j =0; j<n;j++)
+			cin>> ar[j];
+		for(int x = 0;x<n;x++)
+		{
+			for(int y =0; y<n; y++)
+			{
+				if(x!=y && ans>=abs(ar[x]-ar[y]))
+					ans = abs(ar[x]-ar[y]);
+			}
+		}
+		cout<<ans<<endl;
+	}
+	
+	
+
+	return 0;
+}
